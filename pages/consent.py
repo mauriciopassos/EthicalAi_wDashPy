@@ -19,7 +19,7 @@ viFrame = html.Iframe(
 
 videoFrame = html.Div(viFrame, className="videoFrame")
 
-saibaMais = html.P("> Saiba mais")
+saibaMais = html.P("> Saiba mais...")
 
 
 layout = dbc.Container(
