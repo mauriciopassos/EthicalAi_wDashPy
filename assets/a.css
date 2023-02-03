@@ -1,0 +1,10 @@
+a {
+  font-family: inherit;
+  font-size: 20px;
+  color: var(--color-white);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--color-white);
+}
