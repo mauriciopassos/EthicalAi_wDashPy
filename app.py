@@ -23,7 +23,7 @@ badges = html.Div(
             ]
 )
 
-footer = html.Section(badges, className="fbagdes")
+fbages = html.Section(badges, className="fbagdes")
 
 app.layout = dbc.Container(
     [
@@ -31,7 +31,7 @@ app.layout = dbc.Container(
 
         dash.page_container,
 
-        footer
+        fbages
     ]
 )
 
