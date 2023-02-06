@@ -12,26 +12,26 @@ app.title = "Ethical Dilemmas in Software Development"
 title = html.H1("Ethical Dilemmas in Software Development")
 header = html.Header(title)
 
-badges = html.Span(
-        [
-            html.Div(
-                [
-                    dbc.Badge([html.I(className="bi bi-bank"), "  AIRES at PUCRS"], href="https://en.airespucrs.org/",
-                        className="text-decoration-none", style={'margin-right': '5px'}),
-                    dbc.Badge([html.I(className="bi bi-filetype-py"), "  Made with Python"], href="https://www.python.org/",
-                        className="text-decoration-none", style={'margin-right': '5px'}),
-                    dbc.Badge([html.I(className="bi bi-github"), "  Nkluge-correa"], href="https://nkluge-correa.github.io/",
-                        className="text-decoration-none", style={'margin-right': '5px'})
-                ], style={'textAlign': 'center', 'margin-bottom': '20px'})
-        ]
+badges = html.Div(
+            [
+                dbc.Badge([html.I(className="bi bi-bank"), "  AIRES at PUCRS"], href="https://en.airespucrs.org/",
+                    className="text-decoration-none"),
+                dbc.Badge([html.I(className="bi bi-filetype-py"), "  Made with Python"], href="https://www.python.org/",
+                    className="text-decoration-none"),
+                dbc.Badge([html.I(className="bi bi-github"), "  Nkluge-correa"], href="https://nkluge-correa.github.io/",
+                    className="text-decoration-none")
+            ]
 )
+
+footer = html.Section(badges, className="myfooter")
 
 app.layout = dbc.Container(
     [
         header,
-        badges,
 
-        dash.page_container
+        dash.page_container,
+
+        footer
     ]
 )
 
