@@ -2,6 +2,8 @@ import dash
 import dash_bootstrap_components as dbc
 from dash import html, dcc
 
+from pages import scenario
+
 
 dash.register_page(__name__, name="ACM", title="Ethical Dilemmas in Software Development")
 
@@ -56,7 +58,11 @@ sectionlearnMore = html.Section(
 #     className="d-grid gap-2 d-md-flex justify-content-md-end",
 # )
 
-btn = html.A("I confirm that I have read the ACM Code of Ethics", className="button", href="#")
+btn = html.A("I confirm that I have read the ACM Code of Ethics", className="button", href=dash.page_registry['pages.scenario']['relative_path'])
+
+# for page in dash.page_registry.values():
+#     print(page)
+#     print("\n")
 
 layout = dbc.Container(
       [

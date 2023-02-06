@@ -2,7 +2,6 @@ import dash
 import dash_bootstrap_components as dbc
 from dash import html, dcc
 
-
 dash.register_page(__name__, path="/", name="Consent", title="Ethical Dilemmas in Software Development")
 
 consentTitle = html.Section(
