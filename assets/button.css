@@ -1,0 +1,24 @@
+.button {
+  display: block;
+
+  background-color: #083C83;
+  border: 2px solid #F2F2F2;
+
+  width: fit-content;
+  padding: 10px 15px;
+
+  margin: 20px 0px 55px auto;
+
+  cursor: pointer;  
+  transition: transform 200ms ease-in-out;
+  transition: background-color 200ms ease-in-out;
+}
+
+.button:hover {
+  background-color: #1a66d1;
+  transform: scaleX(1.03);
+}
+
+a.button:hover {
+  color: var(--color-white);
+}

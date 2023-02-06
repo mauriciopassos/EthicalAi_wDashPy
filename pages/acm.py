@@ -3,18 +3,18 @@ import dash_bootstrap_components as dbc
 from dash import html, dcc
 
 
-dash.register_page(__name__, path="/", name="Consent", title="Ethical Dilemmas in Software Development")
+dash.register_page(__name__, name="ACM", title="Ethical Dilemmas in Software Development")
 
 consentTitle = html.Section(
             [
-              html.H2("Online Study Consent Form"),
+              html.H2("ACM Code of Ethics and Professional Conduct"),
               html.P("Assista o vídeo a seguir e clique em Concordar...")
             ]
 )
 
 viFrame = html.Iframe(
               width="700", height="394",
-              src="https://www.youtube.com/embed/P5HNeahRYDM",
+              src="https://www.youtube.com/embed/4iHgNAc6HlU",
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" ,
               )
 
@@ -55,7 +55,7 @@ sectionlearnMore = html.Section(
 #     className="d-grid gap-2 d-md-flex justify-content-md-end",
 # )
 
-btn = html.A("I agree to participate in the this research", className="button", href=dash.page_registry['pages.acm']['relative_path'])
+btn = html.A("I confirm that I have read the ACM Code of Ethics", className="button", href="#")
 
 layout = dbc.Container(
       [
