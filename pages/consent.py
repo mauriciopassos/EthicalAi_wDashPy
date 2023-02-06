@@ -32,12 +32,27 @@ sectionlearnMore = html.Section(
                 className="learnMore hide"
 )
 
+btn = html.Div(
+    [
+          dbc.Button(
+                'I agree to participate in the this research',
+                id='close-consent',
+                className='ms-auto',
+                n_clicks=0,
+                color='light',
+                outline=True
+                )
+    ],
+    className="d-grid gap-2 d-md-flex justify-content-md-end",
+)
+
 layout = dbc.Container(
       [
         consentTitle,
         videoFrame,
         linklearnMore,
-        sectionlearnMore
+        sectionlearnMore,
+        btn
       ]
 )
 
