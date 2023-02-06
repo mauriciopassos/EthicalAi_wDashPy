@@ -1,6 +1,8 @@
 import dash
 import dash_bootstrap_components as dbc
-from dash import html
+
+from dash import html, dcc
+
 
 dash.register_page(__name__, path="/", name="Consent", title="Ethical Dilemmas in Software Development")
 
@@ -20,14 +22,22 @@ viFrame = html.Iframe(
 videoFrame = html.Section(viFrame, className="videoFrame")
 
 linklearnMore = html.A(
-                "> Saiba mais...",
+              [
+                html.I(className="learnarrow bi bi-arrow-right-short"),
+                " Saiba mais..."
+              ],
                 href="#",
                 className="lLM",
 )
 
 sectionlearnMore = html.Section(
                 [
-                  html.P("Este espaço é destinado as informações do Saiba Mais...")
+                  #html.P("Este espaço é destinado as informações do Saiba Mais...")
+                  dcc.Markdown(
+                    """
+                    Este espaço é _destinado as informações_ do **Saiba Mais**...
+                    """
+                  )
                 ],
                 className="learnMore hide"
 )
