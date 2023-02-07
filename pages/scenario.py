@@ -22,11 +22,17 @@ scenarioImg = html.Img(src='assets/img/scenario.gif', alt="Animation of a develo
                         style={'display': 'block', 'margin-left': 'auto', 'margin-right': 'auto', 'margin-bottom': '15px', 'width': '43%'}
                       )
 
-# for page in dash.page_registry.values():
-#     print(page)
-#     print("\n")
-
-btn = html.A("Start", className="button", href=dash.page_registry['pages.demographic']['relative_path'])
+btn = html.Div(
+    [
+        dbc.Button(["Start", html.I(className="bi bi-chevron-double-right")],
+                   color="light", outline=False, size="xl",
+                   href=dash.page_registry['pages.demographic']['relative_path'],
+                   id='go-to-c',  n_clicks=0,
+                   className="mt-3 mb-3",
+                   ),
+    ],
+    className="d-grid gap-2 col-6 mx-auto",
+)
 
 layout = dbc.Container(
       [
@@ -36,4 +42,3 @@ layout = dbc.Container(
         btn
       ]
 )
-

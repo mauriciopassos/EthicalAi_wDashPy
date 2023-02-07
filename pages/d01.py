@@ -43,11 +43,18 @@ d01Img = html.Img(src='assets/img/dilemma_1.gif', alt="Animation of a TV screen 
                     )
 
 
-# for page in dash.page_registry.values():
-#     print(page)
-#     print("\n")
-
-btn = html.A("Next >>", className="button", href="#")
+btn = html.Div(
+    [
+        dbc.Button(["Next", html.I(className="bi bi-chevron-double-right")],
+                   color="light", outline=False, size="xl",
+                   #href=dash.page_registry['pages.d02']['relative_path'],
+                   href="#",
+                   id='go-to-c',  n_clicks=0,
+                   className="mt-3 mb-3",
+                   ),
+    ],
+    className="d-grid gap-2 col-6 mx-auto",
+)
 
 layout = dbc.Container(
         [

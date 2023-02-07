@@ -128,7 +128,7 @@ demo_form = dbc.Form([
 #     print(page)
 #     print("\n")
 
-go_on = html.Div(
+btn = html.Div(
     [
         dbc.Button(["Next", html.I(className="bi bi-chevron-double-right")],
                    color="light", outline=False, size="xl",
@@ -140,35 +140,13 @@ go_on = html.Div(
     className="d-grid gap-2 col-6 mx-auto",
 )
 
-nodisplay = html.Div(id='hidden-div-c', style={'display': 'none'})
+#nodisplay = html.Div(id='hidden-div-c', style={'display': 'none'})
 
 layout = dbc.Container(
         [
             progress,
             demographicTitle,
             demo_form,
-            go_on,
-            nodisplay
+            btn
         ]
 )
-
-@callback(
-
-    [Output('hidden-div-c', 'children')],
-
-    Input('go-to-c', 'n_clicks_timestamp'),
-
-    [State('email-input-c', 'value'),
-     State('age-input-c', 'value'),
-     State('status-input-c', 'value'),
-     State('formation-input-c', 'value'),
-     State('gender-input-c', 'value'),
-     ]
-)
-def update_output(click, email, age, status, formation, gender):
-    if click is not None:
-
-        return ['']
-    else:
-        return ['']
-
