@@ -1,12 +1,14 @@
 import dash
 import dash_bootstrap_components as dbc
-from dash import html, dcc
+from dash import html, dcc, Input, Output, callback, State
+
+from pages import d01
 
 dash.register_page(__name__, name="Demographic Information", title="Ethical Dilemmas in Software Development")
 
 demographicTitle = html.Section(
             [
-              html.H2("Demographic Information"),
+                html.H2("Demographic Information"),
             ]
 )
 
@@ -19,8 +21,7 @@ email_input = dbc.Row(
     [
         dbc.Label("Email", html_for="email-row", width=2),
         dbc.Col([
-            dbc.Input(id="email-input-c", type="email",
-                      value="example@example.com", required=True),
+            dbc.Input(id="email-input-c", type="email", value="example@example.com", required=True),
             dbc.FormText("Type in a valid email...")
         ], width=10,
         ),
@@ -32,8 +33,7 @@ age_input = dbc.Row(
     [
         dbc.Label("Age", html_for="age-row", width=2),
         dbc.Col([
-            dbc.Input(value=18, id="age-input-c",
-                      type="number", min=18, max=100, step=1, required=True),
+            dbc.Input(value=18, id="age-input-c", type="number", min=18, max=100, step=1, required=True),
             dbc.FormText(
                 "Type in your age (you have to be over 18 to participate in this research)..."),
         ], width=10,
@@ -121,22 +121,54 @@ demo_form = dbc.Form([
     status_input,
     formation_input,
     gender_input
-], style={'margin-top': '30px'}
+], className="mt-4",
 )
-
 
 # for page in dash.page_registry.values():
 #     print(page)
 #     print("\n")
 
-btn = html.A("Next >>", className="button", href="#")
+go_on = html.Div(
+    [
+        dbc.Button(["Next", html.I(className="bi bi-chevron-double-right")],
+                   color="light", outline=False, size="xl",
+                   href=dash.page_registry['pages.d01']['relative_path'],
+                   id='go-to-c',  n_clicks=0,
+                   className="mt-3 mb-3",
+                   ),
+    ],
+    className="d-grid gap-2 col-6 mx-auto",
+)
+
+nodisplay = html.Div(id='hidden-div-c', style={'display': 'none'})
 
 layout = dbc.Container(
-      [
-        progress,
-        demographicTitle,
-        demo_form,
-        btn
-      ]
+        [
+            progress,
+            demographicTitle,
+            demo_form,
+            go_on,
+            nodisplay
+        ]
 )
+
+@callback(
+
+    [Output('hidden-div-c', 'children')],
+
+    Input('go-to-c', 'n_clicks_timestamp'),
+
+    [State('email-input-c', 'value'),
+     State('age-input-c', 'value'),
+     State('status-input-c', 'value'),
+     State('formation-input-c', 'value'),
+     State('gender-input-c', 'value'),
+     ]
+)
+def update_output(click, email, age, status, formation, gender):
+    if click is not None:
+
+        return ['']
+    else:
+        return ['']
 

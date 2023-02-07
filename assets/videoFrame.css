@@ -2,3 +2,11 @@
   display: block;
   text-align: center;
 }
+
+.btn-light {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #083c83;
+  --bs-btn-border-color: #f8f9fa;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #1a66d1;
+}
