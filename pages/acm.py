@@ -43,25 +43,19 @@ sectionlearnMore = html.Section(
                 className="learnMore hide"
 )
 
-# btn = html.Div(
-#     [
-#           dbc.Button(
-#                 'I agree to participate in the this research',
-#                 id='close-consent',
-#                 className='ms-auto',
-#                 n_clicks=0,
-#                 color='light',
-#                 outline=True
-#                 )
-#     ],
-#     className="d-grid gap-2 d-md-flex justify-content-md-end",
-# )
-
-btn = html.A("I confirm that I have read the ACM Code of Ethics", className="button", href=dash.page_registry['pages.scenario']['relative_path'])
-
-# for page in dash.page_registry.values():
-#     print(page)
-#     print("\n")
+btn = html.Div(
+    [
+      dbc.Button('I confirm that I have read the ACM Code of Ethics',
+                  id='close-consent',
+                  className='ms-auto',
+                  n_clicks=0,
+                  color='light',
+                  outline=False,
+                  size="xl",
+                  href=dash.page_registry['pages.scenario']['relative_path']
+                )
+    ], className="mt-3 d-grid gap-2 col-12 mx-auto",
+)
 
 layout = dbc.Container(
       [
