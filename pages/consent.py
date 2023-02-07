@@ -54,7 +54,23 @@ sectionlearnMore = html.Section(
 #     className="d-grid gap-2 d-md-flex justify-content-md-end",
 # )
 
-btn = html.A("I agree to participate in the this research", className="button", href=dash.page_registry['pages.acm']['relative_path'])
+#btn = html.A("I agree to participate in the this research", className="button", href=dash.page_registry['pages.acm']['relative_path'])
+
+
+btn = html.Div(
+    [
+      dbc.Button('I agree to participate in the this research',
+                  id='close-consent',
+                  className='ms-auto',
+                  n_clicks=0,
+                  color='light',
+                  outline=False,
+                  size="xl",
+                  href=dash.page_registry['pages.acm']['relative_path']
+                )
+    ], className="mt-3 d-grid gap-2 col-12 mx-auto",
+)
+
 
 layout = dbc.Container(
       [
