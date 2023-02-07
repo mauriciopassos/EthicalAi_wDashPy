@@ -7,7 +7,7 @@ from pages import scenario
 
 dash.register_page(__name__, name="ACM", title="Ethical Dilemmas in Software Development")
 
-consentTitle = html.Section(
+ACMTitle = html.Section(
             [
               html.H2("ACM Code of Ethics and Professional Conduct"),
               html.P("Assista o vídeo a seguir e clique em Concordar...")
@@ -66,7 +66,7 @@ btn = html.A("I confirm that I have read the ACM Code of Ethics", className="but
 
 layout = dbc.Container(
       [
-        consentTitle,
+        ACMTitle,
         videoFrame,
         linklearnMore,
         sectionlearnMore,
