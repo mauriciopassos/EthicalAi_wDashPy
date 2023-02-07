@@ -26,7 +26,7 @@ scenarioImg = html.Img(src='assets/img/scenario.gif', alt="Animation of a develo
 #     print(page)
 #     print("\n")
 
-btn = html.A("Start", className="button", href="#")
+btn = html.A("Start", className="button", href=dash.page_registry['pages.demographic']['relative_path'])
 
 layout = dbc.Container(
       [

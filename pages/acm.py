@@ -4,7 +4,6 @@ from dash import html, dcc
 
 from pages import scenario
 
-
 dash.register_page(__name__, name="ACM", title="Ethical Dilemmas in Software Development")
 
 ACMTitle = html.Section(

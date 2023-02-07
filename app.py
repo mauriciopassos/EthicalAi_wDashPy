@@ -7,6 +7,8 @@ app = dash.Dash(__name__,
                     external_stylesheets=['https://fonts.googleapis.com/css2?family=Share+Tech&display=swap',dbc.themes.BOOTSTRAP,dbc.icons.BOOTSTRAP],
                     use_pages=True)
 
+server = app.server
+
 app.title = "Ethical Dilemmas in Software Development"
 
 title = html.H1("Ethical Dilemmas in Software Development")
