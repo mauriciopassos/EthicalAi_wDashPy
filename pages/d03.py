@@ -2,6 +2,8 @@ import dash
 import dash_bootstrap_components as dbc
 from dash import html, dcc
 
+from pages import d04
+
 dash.register_page(__name__, name="3rd Dilemma", title="Ethical Dilemmas in Software Development")
 
 d03Title = html.Section(
@@ -38,7 +40,7 @@ d03 = dbc.Row(
     className="mb-3",
 )
 
-d03Img = html.Img(src='assets/img/dilemma_3.gif', alt="Animation of a developer working on a computer (very attentive) with code lines passing on the background.", className="mx-auto mb-3",
+d03Img = html.Img(src='assets/img/dilemma_3.gif', alt="Animation of a grid of blue squares that turns into a red pirate skull.", className="mx-auto mb-3",
                         style={'display': 'block', 'width': '43%'}
                     )
 
@@ -47,8 +49,7 @@ btn = html.Div(
     [
         dbc.Button(["Next", html.I(className="bi bi-chevron-double-right")],
                    color="light", outline=False, size="xl",
-                   #href=dash.page_registry['pages.d04']['relative_path'],
-                   href="#",
+                   href=dash.page_registry['pages.d04']['relative_path'],
                    id='go-to-3',  n_clicks=0,
                    className="mt-3 mb-3",
                    ),

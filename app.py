@@ -26,16 +26,6 @@ badges = html.Div(
 
 fbages = html.Section(badges, className="fbagdes")
 
-
-
-
-# for page in dash.page_registry.values():
-#     print(page)
-#     print("\n")
-
-
-
-
 app.layout = dbc.Container(
     [
         header,
