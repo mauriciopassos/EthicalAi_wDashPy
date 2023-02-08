@@ -2,9 +2,7 @@ import dash
 import dash_bootstrap_components as dbc
 from dash import html, dcc
 
-from pages import d02
-
-dash.register_page(__name__, name="1st Dilemma", title="Ethical Dilemmas in Software Development")
+dash.register_page(__name__, name="2nd Dilemma", title="Ethical Dilemmas in Software Development")
 
 d02Title = html.Section(
             [
@@ -49,9 +47,8 @@ btn = html.Div(
     [
         dbc.Button(["Next", html.I(className="bi bi-chevron-double-right")],
                    color="light", outline=False, size="xl",
-                   #href=dash.page_registry['pages.d03']['relative_path'],
-                   href="#",
-                   id='go-to-c',  n_clicks=0,
+                   href=dash.page_registry['pages.d03']['relative_path'],
+                   id='go-to-2',  n_clicks=0,
                    className="mt-3 mb-3",
                    ),
     ],

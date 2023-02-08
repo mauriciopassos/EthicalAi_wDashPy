@@ -50,7 +50,7 @@ btn = html.Div(
         dbc.Button(["Next", html.I(className="bi bi-chevron-double-right")],
                    color="light", outline=False, size="xl",
                    href=dash.page_registry['pages.d02']['relative_path'],
-                   id='go-to-c',  n_clicks=0,
+                   id='go-to-1',  n_clicks=0,
                    className="mt-3 mb-3",
                    ),
     ],
