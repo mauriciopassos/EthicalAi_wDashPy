@@ -16,3 +16,16 @@
 .btn-light:hover {
   transform: scaleX(1.03);
 }
+
+
+.offcanvas{
+  background-color: var(--color-background);
+}
+
+.offcanvas a{
+  color: steelblue;
+}
+
+.offcanvas a:hover{
+  color: #1a66d1;
+}

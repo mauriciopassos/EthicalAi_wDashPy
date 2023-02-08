@@ -38,8 +38,8 @@ d01 = dbc.Row(
     className="mb-3",
 )
 
-d01Img = html.Img(src='assets/img/dilemma_1.gif', alt="Animation of a TV screen having signal problems.",
-                        style={'display': 'block', 'margin-left': 'auto', 'margin-right': 'auto', 'margin-bottom': '15px', 'width': '43%'}
+d01Img = html.Img(src='assets/img/dilemma_1.gif', alt="Animation of a TV screen having signal problems.", className="mx-auto mb-3",
+                        style={'display': 'block', 'width': '43%'}
                     )
 
 

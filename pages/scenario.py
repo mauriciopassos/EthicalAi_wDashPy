@@ -15,11 +15,10 @@ mdown = dcc.Markdown('''
         - The company is in **good financial shape** and is maintaining a **moderate competitive position** (_unless otherwise stated_).
         - Although **international competition is strong**, the company hopes to **improve its global presence**.
         - The company strives to maintain a **strong organizational culture**, whose backbone is **high ethical standards**.
-
         ''')
 
-scenarioImg = html.Img(src='assets/img/scenario.gif', alt="Animation of a developer working on a computer.",
-                        style={'display': 'block', 'margin-left': 'auto', 'margin-right': 'auto', 'margin-bottom': '15px', 'width': '43%'}
+scenarioImg = html.Img(src='assets/img/scenario.gif', alt="Animation of a developer working on a computer.", className="mx-auto mb-3",
+                        style={'display': 'block', 'width': '43%'}
                       )
 
 btn = html.Div(
