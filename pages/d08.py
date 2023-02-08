@@ -48,7 +48,7 @@ btn = html.Div(
                    color="light", outline=False, size="xl",
                    #href=dash.page_registry['pages.d09]['relative_path'],
                    href="#",
-                   id='go-to-7', n_clicks=0,
+                   id='go-to-8', n_clicks=0,
                    className="mt-3 mb-3",
                    ),
     ],
