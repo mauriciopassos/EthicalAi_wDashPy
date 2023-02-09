@@ -309,13 +309,12 @@ layout = dbc.Container(
         ]
 )
 
-
-@callback(
-    Output("offcanvas-c", "is_open"),
-    Input("open-offcanvas-c", "n_clicks"),
-    State("offcanvas-c", "is_open"),
-)
-def toggle_offcanvas_scrollable(n1, is_open):
-    if n1:
-        return not is_open
-    return is_open
+# @callback(
+#     Output("offcanvas-c", "is_open"),
+#     Input("open-offcanvas-c", "n_clicks"),
+#     State("offcanvas-c", "is_open"),
+# )
+# def toggle_offcanvas_scrollable(n1, is_open):
+#     if n1:
+#         return not is_open
+#     return is_open

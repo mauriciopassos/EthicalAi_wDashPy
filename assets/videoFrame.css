@@ -33,3 +33,18 @@
 .offcanvas-header {
   background-color: steelblue;
 }
+
+.modal-content {
+  background-color: var(--color-background);
+}
+
+.modal-header{
+  background-color: steelblue;
+}
+.modal-body a{
+  color: steelblue;
+}
+
+.modal-body a:hover{
+  color: #1a66d1;
+}
