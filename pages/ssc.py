@@ -308,9 +308,7 @@ submit_button = html.Div(
     className="d-grid gap-2 col-6 mx-auto",
 )
 
-thank_you = html.Div(
-    [
-        dbc.Modal(
+thank_you = dbc.Modal(
             [
                 dbc.ModalHeader(dbc.ModalTitle(
                     "The End! 🤗"), close_button=False),
@@ -342,9 +340,7 @@ thank_you = html.Div(
             id="thank-you",
             size="lg",
             is_open=False,
-        ),
-    ], className="tnks", style={'display':'none'},
-)
+        )
 
 layout = dbc.Container(
         [
@@ -369,14 +365,13 @@ layout = dbc.Container(
             
             thank_you,
             submit_button,
-            #html.Div([thank_you], style={'display': 'none'}),
         ]
 )
 
 # @callback(
-#     Output("thank-you", "is_open"),
-#     [Input('submit-button', "n_clicks")],
-#     [State("thank-you", "is_open")],
+#     Output('thank-you', 'is_open'),
+#     Input('submit-button', 'n_clicks'),
+#     State('thank-you', 'is_open'),
 # )
 # def toggle_submit(n_clicks, is_open):
 #     if n_clicks > 0:
