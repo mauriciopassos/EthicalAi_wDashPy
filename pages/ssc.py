@@ -323,11 +323,7 @@ thank_you = dbc.Modal(
                     The Network for Ethical and Safe Artificial Intelligence emerged at the intersection of researchers, companies, universities, and national and international institutions, to promote the development of safe and ethical Artificial Intelligence. In a world **where technology advances rapidly, playing an increasingly central role in our lives, it is vital that ethical precepts, along with safety mechanisms, advance in the same proportion - and this is our task**.
 
                     If you would like to learn more about the research we are conducting within AIRES and RAIES, please visit this [link](https://nkluge-correa.github.io/on-going.html)!
-                    
-                    ''', style={'font-size': 18,
-                                'text-align': 'justify',
-                                'text-justify': 'inter-word'})
-
+                    ''')
                 ),
                 dbc.ModalFooter(
                     dbc.Button(

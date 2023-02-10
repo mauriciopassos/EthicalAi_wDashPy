@@ -1,0 +1,161 @@
+:root { /* espaço de definição de variáveis */
+  --color-black: #000;
+  --color-white: #fff;
+
+  --color-background: #011226;
+}
+  
+body {
+  background-color: var(--color-background);
+
+  font-family: 'Share Tech', Arial, Helvetica, sans-serif;
+  color: var(--color-white);
+}
+  
+.hide {
+  display: none;
+}
+
+ul {
+  font-size: 17px;
+}
+
+a {
+  font-family: inherit;
+  font-size: 20px;
+  color: var(--color-white);
+  text-decoration: none;
+}
+
+a:hover {
+  color: #1a66d1;
+}
+
+.bg-secondary {
+  --bs-bg-opacity: 1;
+  background-color: rgba(var(--color-background),var(--bs-bg-opacity))!important;
+}
+
+.badge {
+  --bs-badge-font-size: 0.92em;
+}
+
+.button {
+  display: block;
+
+  background-color: #083C83;
+  border: 2px solid #F2F2F2;
+
+  width: fit-content;
+  padding: 10px 15px;
+
+  margin: 20px 0px 55px auto;
+
+  cursor: pointer;  
+  transition: transform 200ms ease-in-out;
+  transition: background-color 200ms ease-in-out;
+}
+
+.btn-light {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #083c83;
+  --bs-btn-border-color: #f8f9fa;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #1a66d1;
+
+  transition: transform 200ms ease-in-out;
+}
+
+.btn-light:hover {
+  transform: scaleX(1.03);
+}
+
+
+.offcanvas{
+  background-color: var(--color-background);
+}
+
+.offcanvas a{
+  color: steelblue;
+}
+
+.offcanvas a:hover{
+  color: #1a66d1;
+}
+
+.offcanvas-header {
+  background-color: steelblue;
+}
+
+.modal-content {
+  background-color: var(--color-background);
+}
+
+.modal-header{
+  background-color: steelblue;
+}
+.modal-body a{
+  color: steelblue;
+}
+
+.modal-body a:hover{
+  color: #1a66d1;
+}
+
+.button:hover {
+  background-color: #1a66d1;
+  transform: scaleX(1.03);
+}
+
+a.button:hover {
+  color: var(--color-white);
+}
+
+.fbagdes {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  padding: 5px;
+  color: var(--color-white);
+}
+
+h1 {
+  font-size: 64px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 40px;
+}
+
+header {
+  display: flex;  
+  flex-direction: column;
+  justify-content: center;
+
+  text-align: center;
+
+  width: 100%;
+  height: 250px;
+
+  background-image: url("../assets/img/back1.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+p {
+  font-size: 20px;
+}
+
+section {
+  margin-bottom: 20px;
+}
+
+.learnMore {
+  margin-top: 20px;
+}
+
+.videoFrame {
+  display: block;
+  text-align: center;
+}
